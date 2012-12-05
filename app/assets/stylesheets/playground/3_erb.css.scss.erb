@@ -1,0 +1,11 @@
+// The pre-procssor rules is the same as everything else, so if you for some reason want to use erb in your CSS, you will be able to
+
+#css_test {
+	.three:before {
+		content: "This is added by <%= (["ERB"] * 5).join(" ") %>";
+	}
+
+	.three {
+		background: rgba(255,255,255,0.5);
+	}
+}

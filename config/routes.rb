@@ -1,4 +1,7 @@
 CarbonFiberHackers::Application.routes.draw do
+  get 'playground(/)' => 'playground#index'
+  get 'playground/:action' => 'playground'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,17 @@
+<h1>Take a look at these examples:</h1>
+
+<ul>
+	<% @views.each do |v| %>
+		<% next if v[:name] == "index" %>
+		<li>
+			<%= link_to v[:name].titlecase, action: v[:name] %>
+			(Source: <code><%= v[:path] %></code>)
+		</li>
+	<% end %>
+	<li>Feel free to experiment by adding anything to <code><%= Pathname.new(File.join(__FILE__, "..")).cleanpath %></code>. They will show up on this list automatically!</li>
+</ul>
+
+<p>
+	You can also find the source for this index page at:
+	<code><%= __FILE__ %></code>
+</p>

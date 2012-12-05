@@ -1,0 +1,41 @@
+<h1>This is another test.</h1>
+
+<ul>
+	<li>You can find this file at <code>app/views/playground/b_simple_erb.html.erb</code>.</li>
+	<li>In here, pure <code>HTML</code> works just fine.</li>
+	<li>However, note that the filename ends in <code>.html.erb</code> instead of just <code>.html</code>.</li>
+	<li>This means that the file will be pre-processed by the <code>ERB</code> (stands for Embedded-Ruby) engine and become an <code>HTML</code> file.</li>
+	<li>When you do <code><%%= some_ruby_code %></code>, the result will be inserted inplace, similar to how <code>PHP</code> works.</li>
+	<li>
+		For example:
+		<ul>
+			<li><%= "Hello World" %>!</li>
+			<li><%= "The sum of 5 + 2 is #{5 + 2}" %>.</li>
+			<li>The time is now <code><%= Time.now %></code>.</li>
+			<li>This file is located at: <code><%= __FILE__ %></code>.</li>
+			<li>A radom number in the range <code>[0,10)</code>: <code><%= rand(10) %></code>.</li>
+			<li>
+				Loops works too...
+				<ul>
+					<% 5.times do %>
+						<li>Do not repeat yourself...</li>
+					<% end %>
+				</ul>
+			</li>
+			<% if rand(2) == 0 %>
+				<li>You will only see this if you are lucky.</li>
+			<% else %>
+				<li>You are not so lucky today, try refreshing.</li>
+			<% end %>
+		</ul>
+	</li>
+	<li>
+		Rails comes with a lot of other interesting things, for example:
+		<ul>
+			<li>The plural of cat is <code><%= "cat".pluralize %></code>.</li>
+			<li><code>(735MB + 2987KB)</code> is <code><%= (735.megabytes + 2987.kilobytes) / 1.gigabyte.to_f %>GB</code>.</li>
+			<li>Today is <%= raw("<strong>NOT</strong>") unless Time.now.thursday? %> a Thursday.</li>
+			<li>IronHacker is happening in <%= distance_of_time_in_words_to_now( Time.local(2012,"dec",8,9,0,0), true ) %>.</li>
+		</ul>
+	</li>
+</ul>

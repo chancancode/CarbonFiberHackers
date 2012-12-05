@@ -1,0 +1,39 @@
+/*
+	Note the .css.scss extension. This is a SCSS file!
+
+	If it looks like CSS, because it *is* CSS.
+	SCSS is a superset of CSS, so any valid CSS is valid SCSS either.
+*/
+
+#css_test {
+	padding: 20px;
+}
+
+// But you can do a lot more if you choose to!
+
+// For example, nesting...
+#css_test {
+	.one {
+		color: white;
+	}
+}
+
+// Variables...
+$block-color: rgba(0,255,0,0.3);
+
+#css_test {
+	.one {
+		background: $block-color;
+
+		// Calculations...
+		margin-left: (10px + 5px) * 5 !important;
+
+		// Use & to access the parent (&:before -> .one:before in this case)...
+		&:before {
+			content: "SCSS is AWESOME!";
+		}
+	}
+
+	// Functions...
+	background: darken(fade-in($block-color, 0.3), 30%);
+}

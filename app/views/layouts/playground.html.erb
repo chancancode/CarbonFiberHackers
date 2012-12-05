@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CarbonFiberHackers</title>
+  <!-- You can find the StyleSheets under <%= File.join( Rails.root, "app", "assets", "stylesheets", "playground" ) %> -->
+  <%= stylesheet_link_tag    "playground/application", :media => "all" %>
+  <!-- You can find the JavaScripts under <%= File.join( Rails.root, "app", "assets", "javascripts", "playground" ) %> -->
+  <%= javascript_include_tag "playground/application" %>
+</head>
+<body>
+
+<header>
+	<p>This header can be found in <code>app/views/layouts/playground.html.erb</code>.</p>
+</header>
+
+<%= yield %>
+
+<footer>
+	<p>This footer can be found in <code>app/views/layouts/playground.html.erb</code>.</p>
+</footer>
+
+</body>
+</html>
