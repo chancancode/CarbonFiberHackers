@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/JohnColvin/font-awesome-more-sass-rails.git
+  revision: 6d517780c3a248d50a7495bc433f9f7d8fbde990
+  ref: 6d517780c3a248d50a7495bc433f9f7d8fbde990
+  specs:
+    font-awesome-more-sass-rails (2.0.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -109,6 +118,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 2.2.1.1)
   coffee-rails (~> 3.2.1)
+  font-awesome-more-sass-rails!
   jquery-rails
   pg
   rails (= 3.2.9)
