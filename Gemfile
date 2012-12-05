@@ -21,6 +21,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass', '~> 2.2.1.1'
   gem 'font-awesome-more-sass-rails', github: 'JohnColvin/font-awesome-more-sass-rails', ref: '6d517780c3a248d50a7495bc433f9f7d8fbde990'
+  gem 'bootswatch-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

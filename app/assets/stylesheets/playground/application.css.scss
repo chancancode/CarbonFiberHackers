@@ -1,16 +1,30 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_directory .
- */
+// This is included to demonstrate how to use a theme on bootswatch
+// The version we have is not 100% up to date with the bootstrap version we use,
+// so this might break things
+// 
+// See: https://github.com/maxim/bootswatch-rails and http://bootswatch.com
+// Comment out this line to use default bootstrap theme
+@import "bootswatch/superhero/variables";
 
+// Override any bootstrap variables in this file
+@import "bootstrap_variables_override";
+
+// Bootstrap itself
 @import "bootstrap";
-@import "font-awesome-more"
+
+// The bootswatch theme
+// Again, comment out the next line to use default bootstrap theme
+@import "bootswatch/superhero/bootswatch";
+
+// Vector fonts replacement for the stock icons and more
+// See: http://gregoryloucas.github.com/Font-Awesome-More/
+@import "font-awesome-more";
+
+// Finally, our own overrides go here
+@import "bootstrap_override";
+
+@import "0_just_css";
+@import "1_scss_is_css_on_steroids";
+@import "2_using_images";
+@import "3_erb";
+@import "4_g_bootstrap";
