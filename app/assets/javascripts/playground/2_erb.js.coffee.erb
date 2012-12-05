@@ -1,0 +1,5 @@
+# Heck, you can even use erb if you want!
+# In this case, the file will be first processed by the ERB engine (replace all <%= %> with their results),
+# then passed to the CoffeeScript compiler and turned into a .js file.
+
+console.log "This line is coming from <%= __FILE__ %>"

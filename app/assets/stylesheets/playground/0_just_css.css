@@ -1,0 +1,22 @@
+/* This is just CSS, and it works */
+
+#css_test {
+	overflow: hidden;
+}
+
+#css_test div {
+	float: left;
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 25px;
+}
+
+#css_test .zero:before {
+	content: "Just CSS";
+}
+
+#css_test .zero {
+
+	background: rgba(255,0,0,0.5);
+}

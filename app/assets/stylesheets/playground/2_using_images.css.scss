@@ -1,0 +1,13 @@
+/*
+	Your images should go into the app/assets/images directory.
+
+	In order to reference them in your CSS files, you can use the image-url() function.
+	For this to work, you must enable SCSS pre-processing on those files, i.e. add .scss to the filename.
+	It is very important to use the image-url() function instead of the usual CSS url() syntax!
+*/
+
+#css_test {
+	.two {
+		background-image: image-url("rails.png");
+	}
+}
