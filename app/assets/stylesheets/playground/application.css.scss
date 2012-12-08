@@ -1,30 +1,36 @@
-// This is included to demonstrate how to use a theme on bootswatch
-// The version we have is not 100% up to date with the bootstrap version we use,
-// so this might break things
-// 
-// See: https://github.com/maxim/bootswatch-rails and http://bootswatch.com
-// Comment out this line to use default bootstrap theme
-@import "bootswatch/superhero/variables";
+@import "bootstrap_and_overrides";
 
-// Override any bootstrap variables in this file
-@import "bootstrap_variables_override";
+/*
+	Application CSS code goes here.
 
-// Bootstrap itself
-@import "bootstrap";
+	Keep in mind that SCSS is just CSS. You can override ANY style here just like how you'd usually do it in CSS. (More specific rules trumps less specific rules, !important, etc.)
 
-// The bootswatch theme
-// Again, comment out the next line to use default bootstrap theme
-@import "bootswatch/superhero/bootswatch";
+	Bootstrap also provides a lot of handy mixins. For example, instead of writing:
 
-// Vector fonts replacement for the stock icons and more
-// See: http://gregoryloucas.github.com/Font-Awesome-More/
-@import "font-awesome-more";
+	.navbar {
+		.navbar-inner {
+			-webkit-box-shadow:	...;
+		    -moz-box-shadow: ...;
+	        box-shadow: ...;
+		}
+	}
 
-// Finally, our own overrides go here
-@import "bootstrap_override";
+	You could simply write:
+
+	.navbar {
+		.navbar-inner {
+			@include box-shadow(...);
+		}
+	}
+
+	For a list of all the mixins it provides, see: https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_mixins.scss
+*/
+
+body {
+	padding-top: 20px;
+}
 
 @import "0_just_css";
 @import "1_scss_is_css_on_steroids";
 @import "2_using_images";
-
 @import "4_g_bootstrap";
