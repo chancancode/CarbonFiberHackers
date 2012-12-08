@@ -1,0 +1,56 @@
+/*
+	1. Bootswatch theme
+
+	For a list of Bootswatch themes, see http://bootswatch.com
+
+	Our project depends on https://github.com/maxim/bootswatch-rails, which converted the
+	Bootswatch themes into SCSS stylesheets (from LESS). However, the SCSS versions is not 100%
+	up to date. Based on my testing they seems to work just fine, so feel free to enable it and
+	experiement.
+*/
+
+// Uncomment out this line to use a bootswatch theme. (Replace superhero with whatever theme you want.)
+// @import "bootswatch/superhero/variables";
+
+
+/*
+	2. Overriding Bootstrap/Bootswatch variables
+
+	Bootstrap/Bootswatch variables must be overriden before bootstrap is loaded for them to take
+	effect.
+*/
+
+// Override any bootstrap variables in this file
+@import "bootstrap_and_overrides/_variables_override";
+
+
+/*
+	3. Now we can import bootstrap itself.
+*/
+
+@import "bootstrap";
+
+/*
+	4. Bootswatch theme (cont'd)
+
+	To enable a Bootswatch theme, you'd also need to load its stylesheet here.
+*/
+
+// Uncomment out this line to use a bootswatch theme. (Replace superhero with whatever theme you want.)
+// @import "bootswatch/superhero/bootswatch";
+
+/*
+	5. Font Awesome More
+
+	Font Awesome More (http://gregoryloucas.github.com/Font-Awesome-More/) replaces bootstrap's icon-*
+	graphics with vector fonts, so it can be set to any color and will look good at any size (including
+	retina displays). It also adds a ton of icons.
+*/
+
+@import "font-awesome-more";
+
+/*
+	6. Finally, we can add our own Bootstrap customizations here.
+*/
+
+@import "bootstrap_and_overrides/_bootstrap_override";

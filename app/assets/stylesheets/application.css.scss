@@ -1,15 +1,31 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_directory .
- */
+@import "bootstrap_and_overrides";
 
-@import "bootstrap";
+/*
+	Application CSS code goes here.
+
+	Keep in mind that SCSS is just CSS. You can override ANY style here just like how you'd usually do it in CSS. (More specific rules trumps less specific rules, !important, etc.)
+
+	Bootstrap also provides a lot of handy mixins. For example, instead of writing:
+
+	.navbar {
+		.navbar-inner {
+			-webkit-box-shadow:	...;
+		    -moz-box-shadow: ...;
+	        box-shadow: ...;
+		}
+	}
+
+	You could simply write:
+
+	.navbar {
+		.navbar-inner {
+			@include box-shadow(...);
+		}
+	}
+
+	For a list of all the mixins it provides, see: https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_mixins.scss
+*/
+
+body {
+	padding-top: 20px;
+}
