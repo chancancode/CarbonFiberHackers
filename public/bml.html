@@ -8,18 +8,21 @@ function getURLParameter(name) {
         (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
 		);
 }
-/*
-$.post("test.php", { url: "John", phone: "2pm" },
-function(data) {
- alert("Data Loaded: " + data);
-});
-*/
-
-	//a ok
-   window.parent.postMessage(getURLParameter("url"), "*");
-   
+function handle(data)
+{
+	if (data.status == "completed")
+	{
+		window.parent.postMessage(data.script, "*");
+	}
+	else
+	{
+		setTimeout($.get("test.php", { ticket: token }, handle),500);
+	}
+}
+$.post("test.php", { url: getURLParameter("url"), phone: getURLParameter("phone") },
+	handle);
 </script>
 </head>
 <body>
-<h1>i am here</h1>
+<h1>Loading...</h1>
 </html>
