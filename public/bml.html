@@ -6,13 +6,20 @@
 function getURLParameter(name) {
     return decodeURI(
         (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
-    );
+		);
 }
-//document.getElementById("test").innerHTML = getURLParameter("site");
-window.parent.postMessage("haii", "*");
+/*
+$.post("test.php", { url: "John", phone: "2pm" },
+function(data) {
+ alert("Data Loaded: " + data);
+});
+*/
+
+	//a ok
+   window.parent.postMessage(getURLParameter("url"), "*");
+   
 </script>
 </head>
 <body>
 <h1>i am here</h1>
-<p id="test">Send me a message!</p>
 </html>
