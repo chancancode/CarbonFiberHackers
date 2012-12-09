@@ -1,0 +1,13 @@
+var container = document.createElement("div");
+container.style.padding = "0";
+container.style.margin = "0";
+container.style.border = "1px solid #000000";
+container.id = "giftybox";
+container.style.position = "absolute";
+container.style.top = "0";
+container.style.right = "0";
+container.style.zIndex = 100000;
+container.style.width = "350px";
+container.style.height = "210px";
+container.style.backgroundColor = "white";
+document.body.appendChild(container);
