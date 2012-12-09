@@ -1,17 +1,14 @@
 <html>
 <head>
+<script src="http://code.jquery.com/jquery-1.8.3.js">
+</script>
 <script type="text/javascript">
-if(window.XMLHttpRequest)
-{
-xmlhttp=new XMLHttpRequest();
+function getURLParameter(name) {
+    return decodeURI(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+    );
 }
-else
-{
-xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-}
-xmlhttp.open("GET","json.txt",true);
-xmlhttp.send();
-alert(window.location);
+document.getElementById("test").innerHTML = getURLParameter(site);
 </script>
 </head>
 <body>
