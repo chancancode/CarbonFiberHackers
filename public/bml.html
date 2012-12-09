@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript">
+if(window.XMLHttpRequest)
+{
+xmlhttp=new XMLHttpRequest();
+}
+else
+{
+xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET","json.txt",true);
+xmlhttp.send();
+alert(xmlhttp.responseText);
+</script>
+</head>
+<body>
+<h1>i am here</h1>
+<p id="test">Send me a message!</p>
+</html>
